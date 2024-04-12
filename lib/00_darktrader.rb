@@ -16,3 +16,4 @@ def crypto_function
 
   return crypto_prices
 end
+

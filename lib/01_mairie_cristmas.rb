@@ -5,7 +5,7 @@ require 'open-uri'
 def get_townhall_emails
   doc = Nokogiri::HTML5(URI.open("https://www.aude.fr/annuaire-mairies-du-departement"))
 
-  townhall_page = doc.xpath('//div[contains(@class, "directory-block")]')
+  townhall_page = doc.xpath('//article[contains(@class, "directory-block__item")]')
 
   townhall_list = {}
 
@@ -17,6 +17,8 @@ def get_townhall_emails
 
   return townhall_list
 end
+
+
 
 
 
